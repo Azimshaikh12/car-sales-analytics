@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: carsales
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/carsales
+    username: YOUR_DB_USERNAME
+    password: YOUR_DB_PASSWORD
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3
